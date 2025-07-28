@@ -53,3 +53,13 @@ print('p_text', p_text)
 
 # Get all text in the document
 print('document_text', soup.get_text())
+
+# Access Data in Elements
+
+h3_element = soup.h3
+
+print('h3_element text', h3_element.get_text())  # Get the text of the h3 element
+print('h3_element class', h3_element.get('class'))  # Get the class
+print('h3_element tag name', h3_element.name)  # Get the tag name
+print('h3_element attribute', h3_element.attrs)  # Get the attributes as a dictionary
+print('h3_element specific attribute', h3_element['data-example'])  # Get a specific attribute
